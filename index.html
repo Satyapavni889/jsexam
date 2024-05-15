@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head{
+            font-size: 35px;
+        }
+      h1{
+        text-align: center;
+      }
+      .head1{
+            font-size: 35px;
+        }
+      h3{
+        text-align: center;}
+      button{
+        position: relative;
+        left: 43%;
+        width: 15%;
+        height: 5vh;
+      }
+      
+      .div1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .div1 button{
+        left:0;
+      }
+      .text3{
+        font-size: 20px;
+        
+      }
+      
+      .div2{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .content{
+        display: none;
+        position: relative;
+        left: 42%;
+        width: 30%;
+    }
+    .div3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+      .div3 input{
+        width: 20%;
+        height: 4vh;
+        padding: 0 8px;
+      }
+      .div3 button{
+        left: 0;
+      }
+      ul{
+        margin-left: -4%;
+      }
+      li{
+        list-style: none;
+        font-weight: 600;
+       
+      }
+      .div5{
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+      }
+      img{
+        width: 20%;position: relative;
+        left: 41%;
+        
+      }
+     .div6 p{
+        position: relative;
+        left: 41%;
+        width: 30%;
+      }
+      .div6{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+    </style>
+</head>
+<body>
+    <h1 class="head">SET-1 JS PROGRAMMING TEST </h1>
+    <h3 class="head1">Name:Pavani</h3>
+    <h3 class="head1">Batch:5R</h3>
+    <hr>
+
+    <div class="div1">
+<h1>Change text content</h1>
+<p class="text3">Here is a some text</p>
+<button onclick="textChange()">click here</button>
+    </div>
+
+    <hr>
+
+ <div class="div2">
+<h1>
+    Div Visibility
+</h1>
+<div class="content">
+    showing content when button is clicked
+</div>
+<button onclick="showingDiv()">click here</button>
+
+ </div>
+
+ <hr>
+
+    <div class="div3">
+        <h1>Dynamic Element Creation</h1>
+        <input type="text" placeholder="enter text" >
+
+        <button>submit</button>
+        <ul class="ul">
+
+        </ul>
+    </div>
+    <hr>
+<div class="div4">
+    <h1>Event Handling</h1>
+
+<button class="but">click</button>
+</div>
+<hr>
+<div class="div5">
+    <h1>Element attribute Manipulation</h1>
+    <img src="./b1.jpeg" alt="">
+    <button class="but2" onclick="imgChange()">click here</button>
+</div>
+
+<hr>
+
+<div class="div6">
+
+    <h1>Style Manipulation</h1>
+ <p >changing font size when button is clicked</p>
+
+<button class="but3">click here</button>
+</div>
+    <script>
+
+//function for 1st question from here to 
+let text3=document.querySelector(".text3")
+let div1_but=document.querySelector("button")
+function textChange(){
+    text3.innerText="Text is changed"
+}
+
+
+// here 1st question
+
+  //function for 2nd question from here to 
+        function showingDiv(){
+            let content=document.querySelector(".content")
+            content.style.display="block"
+                  }
+        
+   //2nd question here
+
+   //question for 3rd question from here to 
+let but4=document.querySelector(".div3 button")
+but4.addEventListener("click",()=>{
+    let input=document.querySelector(".div3 input")
+    let ul=document.querySelector(".ul")
+   if(input.value===""){
+    alert(" please enter the text")
+   }else{
+    let li=document.createElement("li")
+    li.innerHTML=input.value
+    ul.appendChild(li)
+   }
+})
+
+   //3rd question here
+
+//fucntion for 4th question from here to
+    let button=document.querySelector(".but")
+    button.addEventListener("click",()=>{
+        alert("Button is clicked")
+    })
+    // 4th question here
+
+    //function for 5th question from here to 
+    function imgChange(){
+        let img=document.querySelector("img")
+        img.setAttribute("src","./B2.jpeg")
+    }
+    // 5th question here
+
+    //fucntion for 6th question from here to
+let but3=document.querySelector(".but3")
+but3.addEventListener("click",()=>{
+    let text=document.querySelector(".div6 p")
+    text.style.fontSize="20px"
+})
+//6th question  here
+
+
+    </script>
+</body>
+</html>
